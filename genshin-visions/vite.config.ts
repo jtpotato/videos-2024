@@ -7,4 +7,7 @@ export default defineConfig({
     motionCanvas(),
     ffmpeg(),
   ],
+  assetsInclude: [
+    "**/*.m4a"
+  ]
 });

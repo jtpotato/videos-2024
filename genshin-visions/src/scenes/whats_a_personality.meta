@@ -1,0 +1,14 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "trigger1",
+      "targetTime": 2.9174449812130967
+    },
+    {
+      "name": "beginDisplayingFactors",
+      "targetTime": 5.376460394141553
+    }
+  ],
+  "seed": 4130493286
+}

@@ -1,18 +1,9 @@
 import { makeScene2D } from "@motion-canvas/2d";
 
-import { createRef, createRefMap, waitFor } from "@motion-canvas/core";
+import { createRef, createRefMap, waitFor, waitUntil } from "@motion-canvas/core";
 
 import { PointCloud, cascade } from "concise-motion-core"
-
-const genshinColors = {
-  pyro: '#ff0000',
-  hydro: '#0000ff',
-  anemo: '#00ddaa',
-  electro: '#aa00ff',
-  dendro: '#00aa00',
-  cryo: '#00aaff',
-  geo: '#ffaa00',
-}
+import { genshinColors } from "../constants";
 
 export default makeScene2D(function* (view) {
   view.fill('black')
@@ -20,13 +11,13 @@ export default makeScene2D(function* (view) {
   const pointCloudRefMap = createRefMap<PointCloud>()
 
   view.add(<>
-    <PointCloud ref={pointCloudRefMap.pyro} label={"Pyro"} radius={100} color={genshinColors.pyro} x={300} y={100} />
+    <PointCloud ref={pointCloudRefMap.pyro} label={"Pyro"} radius={100} color={genshinColors.pyro} x={-660} y={-400} />
     <PointCloud ref={pointCloudRefMap.hydro} label={"Hydro"} radius={100} color={genshinColors.hydro} x={-300} y={200} />
     <PointCloud ref={pointCloudRefMap.anemo} label={"Anemo"} radius={100} color={genshinColors.anemo} x={600} y={-200} />
-    <PointCloud ref={pointCloudRefMap.electro} label={"Electro"} radius={100} color={genshinColors.electro} x={400} y={-100} />
-    <PointCloud ref={pointCloudRefMap.dendro} label={"Dendro"} radius={100} color={genshinColors.dendro} x={-200} y={400} />
+    <PointCloud ref={pointCloudRefMap.electro} label={"Electro"} radius={100} color={genshinColors.electro} x={-100} y={-300} />
+    <PointCloud ref={pointCloudRefMap.dendro} label={"Dendro"} radius={100} color={genshinColors.dendro} x={600} y={300} />
     <PointCloud ref={pointCloudRefMap.cryo} label={"Cryo"} radius={100} color={genshinColors.cryo} x={-600} y={0} />
-    <PointCloud ref={pointCloudRefMap.geo} label={"Geo"} radius={100} color={genshinColors.geo} />
+    <PointCloud ref={pointCloudRefMap.geo} label={"Geo"} radius={100} color={genshinColors.geo} x={200} y={0} />
   </>)
 
   yield* cascade(0.1,
@@ -39,7 +30,7 @@ export default makeScene2D(function* (view) {
     pointCloudRefMap.geo().show(),
   )
 
-  yield* waitFor(1)
+  yield* waitUntil("beginHide")
 
   yield* cascade(0.1,
     pointCloudRefMap.pyro().hide(),

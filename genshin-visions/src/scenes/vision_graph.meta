@@ -1,5 +1,10 @@
 {
   "version": 0,
-  "timeEvents": [],
+  "timeEvents": [
+    {
+      "name": "beginHide",
+      "targetTime": 3.2444050285499437
+    }
+  ],
   "seed": 3631544893
 }
