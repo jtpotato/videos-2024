@@ -10,6 +10,7 @@ import unified_framework from "./scenes/unified_framework?scene";
 import grading_system from "./scenes/grading_system?scene";
 import grade_array from "./scenes/grade_array?scene";
 import pythag_explainer from "./scenes/pythag_explainer?scene";
+import distance_demo from "./scenes/distance_demo?scene";
 
 export default makeProject({
   scenes: [
@@ -20,7 +21,8 @@ export default makeProject({
     unified_framework,
     grading_system,
     grade_array,
-    pythag_explainer
+    pythag_explainer,
+    distance_demo
   ],
   audio: audio,
 });
