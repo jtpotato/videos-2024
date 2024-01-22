@@ -12,10 +12,10 @@ export default makeScene2D(function* (view) {
 
   view.add(<>
     <Circle {...shapeDefaults()} ref={newVisionHolder} />
-    <PointCloud ref={pointCloudRefMap.dendro} label={"Dendro"} radius={100} color={genshinColors.dendro} x={-700} y={0} />
-    <PointCloud ref={pointCloudRefMap.pyro} label={"Pyro"} radius={100} color={genshinColors.pyro} x={-300} y={-400} />
-    <PointCloud ref={pointCloudRefMap.hydro} label={"Hydro"} radius={100} color={genshinColors.hydro} x={300} y={-300} />
-    <PointCloud ref={pointCloudRefMap.cryo} label={"Cryo"} radius={100} color={genshinColors.cryo} x={630} y={100} />
+    <PointCloud ref={pointCloudRefMap.dendro} label={"Dendro"} radius={200} color={genshinColors.dendro} x={-700} y={0} />
+    <PointCloud ref={pointCloudRefMap.pyro} label={"Pyro"} radius={200} color={genshinColors.pyro} x={-300} y={-400} />
+    <PointCloud ref={pointCloudRefMap.hydro} label={"Hydro"} radius={200} color={genshinColors.hydro} x={300} y={-300} />
+    <PointCloud ref={pointCloudRefMap.cryo} label={"Cryo"} radius={200} color={genshinColors.cryo} x={630} y={100} />
   </>)
 
   yield* fadeInFrom("bottom", newVisionHolder, [0, 0])

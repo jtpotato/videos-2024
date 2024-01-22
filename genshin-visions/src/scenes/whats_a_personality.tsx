@@ -10,7 +10,7 @@ export default makeScene2D(function* (view) {
   const spawnerRef = createRef<Spawner>()
 
   view.add(<>
-    <Txt text={"Personality?"} ref={textRefMap.personality} {...textDefaults} />
+    <Txt text={"The Challenges:"} ref={textRefMap.personality} {...textDefaults} />
     <Spawner ref={spawnerRef} radius={400}>
       <Txt text="Factors?" {...textDefaults} />
       <Txt text="Energy?" {...textDefaults} />

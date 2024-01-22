@@ -11,6 +11,7 @@ import grading_system from "./scenes/grading_system?scene";
 import grade_array from "./scenes/grade_array?scene";
 import pythag_explainer from "./scenes/pythag_explainer?scene";
 import distance_demo from "./scenes/distance_demo?scene";
+import vision_choosing from "./scenes/vision_choosing?scene";
 
 export default makeProject({
   scenes: [
@@ -22,7 +23,8 @@ export default makeProject({
     grading_system,
     grade_array,
     pythag_explainer,
-    distance_demo
+    distance_demo,
+    vision_choosing
   ],
   audio: audio,
 });
